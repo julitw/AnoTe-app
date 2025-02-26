@@ -42,25 +42,3 @@ To stop it, run:
 docker-compose down
 ```
 
-### 4. Update Submodules
-If you change a submodule, commit and push the changes:
-
-```bash
-cd anote-api  # or cd anote-ui
-git add .
-git commit -m "Updated submodule"
-git push origin main
-```
-
-Then update the reference in the main repository:
-
-```bash
-cd ..
-git add anote-api  # or anote-ui
-git commit -m "Updated submodule reference"
-git push origin main
-```
-
-### License
-This project is licensed under the MIT License.
-
