@@ -1,0 +1,6 @@
+[submodule "anote-ui"]
+	path = anote-ui
+	url = https://github.com/julitw/Anote-ui.git
+[submodule "anote-api"]
+	path = anote-api
+	url = https://github.com/julitw/Anote-api.git
