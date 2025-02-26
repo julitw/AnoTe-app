@@ -1,0 +1,66 @@
+# Anote-APP
+
+## Project Setup
+
+### 1. Clone the Repository
+Clone the repository to your computer:
+
+```bash
+git git clone --recurse-submodules https://github.com/julitw/Anote-APP.git
+cd Anote-APP
+```
+
+### 2. Create a `.env` File
+Create a `.env` file in the project folder with the following content:
+
+```env
+POSTGRES_USER=your_user
+POSTGRES_PASSWORD=your_password
+POSTGRES_DB=your_database
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+
+CLARIN_API_KEY=your_api_key
+```
+
+Do not add the `.env` file to the repository. To make sure it is ignored, run:
+
+```bash
+echo ".env" >> .gitignore
+```
+
+### 3. Run the Application with Docker
+To start the application, run:
+
+```bash
+docker-compose up --build
+```
+
+To stop it, run:
+
+```bash
+docker-compose down
+```
+
+### 4. Update Submodules
+If you change a submodule, commit and push the changes:
+
+```bash
+cd anote-api  # or cd anote-ui
+git add .
+git commit -m "Updated submodule"
+git push origin main
+```
+
+Then update the reference in the main repository:
+
+```bash
+cd ..
+git add anote-api  # or anote-ui
+git commit -m "Updated submodule reference"
+git push origin main
+```
+
+### License
+This project is licensed under the MIT License.
+
